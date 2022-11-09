@@ -58,7 +58,6 @@ public class ProductController {
     {
         return productDao.findByPrixGreaterThan(400);
     }
-
     @PostMapping(value = "/products")
     public ResponseEntity<Void> ajouterProduit(@Valid @RequestBody Product product){
         Product productAdded = productDao.save(product);
